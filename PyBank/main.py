@@ -10,7 +10,8 @@ with open (csvpath, newline="") as csvfile:
     for x in Months:
         if x not in uniquelist:
             uniquelist.append(x)
-print(len(uniquelist))
+print(f'The total number of months in the database is {len(uniquelist)}')
+
 
 
         
