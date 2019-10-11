@@ -1,11 +1,17 @@
 import os, csv
-Months = []
+Months=[] 
+uniquelist=[] 
 csvpath = os.path.join("Resources", "budget_data.csv")
 with open (csvpath, newline="") as csvfile:
     csvreader=csv.reader(csvfile, delimiter=",")
+    next(csvreader)
     for row in csvreader:
-        Months.append(row)
+        Months.append(row[0])   
+    for x in Months:
+        if x not in uniquelist:
+            uniquelist.append(x)
+print(len(uniquelist))
+
+
         
-a = set(Months)
-Months_count = len(a)
-print(Months_count)
+ 
