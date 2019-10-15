@@ -1,5 +1,5 @@
 import os, csv
-import itertools
+
 Months=[] 
 uniquelist=[]
 Profit_Losses=[]
