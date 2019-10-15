@@ -25,3 +25,14 @@ s = 0
 for n in diff:
     s = s + n
 print(f'The average change:${s/len(diff)}')
+
+maxindex = diff.index(max(diff)) + 1
+print(f'Greatest Increase:{Months[maxindex]}, ${max(diff)}')
+minindex = diff.index(min(diff)) + 1
+print(f'Greatest Decrease:{Months[minindex]}, ${min(diff)}')
+
+#for i in range(len(Months)):
+    #mapped = zip(Months[i], diff[i]) 
+#print(mapped)
+#print(f'Greatest Increase:${max(diff)}')
+#print(f'Greatest Increase:${min(diff)}')
