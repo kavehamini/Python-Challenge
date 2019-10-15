@@ -24,7 +24,7 @@ diff = [int(Profit_Losses[i + 1]) - int(Profit_Losses[i]) for i in range(len(Pro
 s = 0
 for n in diff:
     s = s + n
-print(f'The average change:${s/len(diff)}')
+print(f'The average change:${round(s/len(diff),2)}')
 
 maxindex = diff.index(max(diff)) + 1
 print(f'Greatest Increase:{Months[maxindex]}, ${max(diff)}')

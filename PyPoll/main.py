@@ -53,10 +53,10 @@ print(winner +" is the winner!" )
 
 
 
-finalresults = [ "Total votes: " + str(totalvotecount), " Khan: " + str(khanpercent)+"%" + " ("+str(khancount)+")",
-                " Correy: " + str(correypercent)+"%" + " ("+str(correycount)+")",
-                " Li: " + str(lipercent) +"%" + " ("+str(licount)+")", 
-                " O\'Tooley: " + str(otooleypercent)+"%" +  " ("+str(otooleycount)+")", 
+finalresults = [ "Total votes: " + str(totalvotecount), ", Khan: " + str(khanpercent)+"%" + " ("+str(khancount)+")",
+                ", Correy: " + str(correypercent)+"%" + " ("+str(correycount)+")",
+                ", Li: " + str(lipercent) +"%" + " ("+str(licount)+")", 
+                ", O\'Tooley: " + str(otooleypercent)+"%" +  " ("+str(otooleycount)+")", 
                 ", " +winner +" is the winner!"]
 with open('Pypollresults.txt', 'w') as f:
     for item in finalresults:
