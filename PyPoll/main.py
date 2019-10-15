@@ -40,21 +40,24 @@ print(f'O\'Tooley: {otooleypercent}%, {otooleycount}')
 print(".........................")
 
 if khanpercent > correypercent and khanpercent > lipercent and khanpercent > otooleypercent:
-    print(f'Khan is the winner by {khanpercent}% of the votes')
+    winner = "Khan"
 elif correypercent > khanpercent and correypercent > lipercent and correypercent > otooleypercent:
-    print(f'Coorey is the winner by {correypercent}% of the votes')
+    winner = "Coorey"
 elif lipercent > khanpercent and lipercent > correypercent and lipercent > otooleypercent:
-    print(f'Li is the winner by {lipercent}% of the votes')
+    winner = "Li"
 elif otooleypercent > khanpercent and otooleypercent > correypercent and otooleypercent > lipercent:
-    print(f'O\'Tooley is the winner by {otooleypercent}% of the votes')
+    winner = "O\'Tooley"
 else:
     print("Nobody wines the election")
+print(winner +" is the winner!" )
+
 
 
 finalresults = [ "Total votes: " + str(totalvotecount), " Khan: " + str(khanpercent)+"%" + " ("+str(khancount)+")",
                 " Correy: " + str(correypercent)+"%" + " ("+str(correycount)+")",
                 " Li: " + str(lipercent) +"%" + " ("+str(licount)+")", 
-                " O\'Tooley: " + str(otooleypercent)+"%" +  " ("+str(otooleycount)+")"]
+                " O\'Tooley: " + str(otooleypercent)+"%" +  " ("+str(otooleycount)+")", 
+                ", " +winner +" is the winner!"]
 with open('Pypollresults.txt', 'w') as f:
     for item in finalresults:
         f.write(item)
