@@ -48,8 +48,16 @@ elif lipercent > khanpercent and lipercent > correypercent and lipercent > otool
 elif otooleypercent > khanpercent and otooleypercent > correypercent and otooleypercent > lipercent:
     print(f'O\'Tooley is the winner by {otooleypercent}% of the votes')
 else:
-    Print("Nobody wines the election")
+    print("Nobody wines the election")
 
+
+finalresults = [ "Total votes: " + str(totalvotecount), " Khan: " + str(khanpercent)+"%" + " ("+str(khancount)+")",
+                " Correy: " + str(correypercent)+"%" + " ("+str(correycount)+")",
+                " Li: " + str(lipercent) +"%" + " ("+str(licount)+")", 
+                " O\'Tooley: " + str(otooleypercent)+"%" +  " ("+str(otooleycount)+")"]
+with open('Pypollresults.txt', 'w') as f:
+    for item in finalresults:
+        f.write(item)
 
 
 
