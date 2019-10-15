@@ -1,4 +1,5 @@
 import os, csv
+import itertools
 Months=[] 
 uniquelist=[]
 Profit_Losses=[]
@@ -19,8 +20,8 @@ for num in Profit_Losses:
     sum = sum + int(num)
 print (f'Total:${str(sum)} ')
 
-
-
-
-        
- 
+diff = [int(Profit_Losses[i + 1]) - int(Profit_Losses[i]) for i in range(len(Profit_Losses)-1)]
+s = 0
+for n in diff:
+    s = s + n
+print(f'The average change:${s/len(diff)}')
