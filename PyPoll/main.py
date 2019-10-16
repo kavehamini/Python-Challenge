@@ -65,6 +65,7 @@ elif otooleypercent > khanpercent and otooleypercent > correypercent and otooley
 else:
     print("Nobody wines the election")
 print(winner +" is the winner!" )
+print(".........................")
 
 
 #exporting the results as a text file
