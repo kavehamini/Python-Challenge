@@ -12,6 +12,9 @@ with open(csvpath, newline="") as csvfile:
     for row in csvreader:
         
         candidates.append(row[2])
+    for x in candidates:
+        if x not in uniquelist:
+            uniquelist.append(x)
     
     
 khancount = candidates.count("Khan")
@@ -32,6 +35,11 @@ otooleypercent = round((otooleycount/totalvotecount)*100,3)
 print("Election Results")
 print(".........................")
 print(f'Total votes:{totalvotecount}')
+print(".........................")
+print("A list of the canndidates who received votes:")
+print(" ")
+for item in uniquelist:
+    print(item)
 print(".........................")
 print(f'Khan: {khanpercent}%, {(khancount)}')
 print(f'Correy: {correypercent}%, {(correycount)}')
