@@ -14,6 +14,8 @@ with open (csvpath, newline="") as csvfile:
     for x in Months:
         if x not in uniquelist:
             uniquelist.append(x)
+print("Financial Analysis")
+print("..........................")
 print(f'Total Months:{len(uniquelist)}')
 sum=0
 for num in Profit_Losses:
